@@ -11,7 +11,7 @@ class IndexPage extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
         child: AppBar(
-          title: const Text('网易云'),
+          title: const Text('网抑郁'),
           elevation: 0.5,
           systemOverlayStyle: SystemUiOverlayStyle.light,
           backgroundColor: Colors.pinkAccent,
@@ -19,7 +19,7 @@ class IndexPage extends StatelessWidget {
         )
       ),
       body: Center(
-        child: const Text('我的网易云'),
+        child: const Text('我的网疑云'),
       ),
     );
   }
