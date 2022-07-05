@@ -5,13 +5,13 @@ import 'package:flutter/services.dart';
 class IndexPage extends StatelessWidget {
   const IndexPage({Key? key}) : super(key: key);
 
-  // final List tabs = [
-  //   {'icon': Icon(Icons.access_alarm), 'text': '发现'},
-  //   {'icon': Icon(Icons.access_alarm), 'text': '播客'},
-  //   {'icon': Icon(Icons.access_alarm), 'text': '关注'},
-  //   {'icon': Icon(Icons.access_alarm), 'text': '云村'},
-  //   {'icon': Icon(Icons.access_alarm), 'text': '我的'},
-  // ];
+  final List tabs = [
+    {'icon': Icon(Icons.access_alarm), 'text': '发现'},
+    {'icon': Icon(Icons.access_alarm), 'text': '播客'},
+    {'icon': Icon(Icons.access_alarm), 'text': '关注'},
+    {'icon': Icon(Icons.access_alarm), 'text': '云村'},
+    {'icon': Icon(Icons.access_alarm), 'text': '我的'},
+  ];
   // final List<Widget> pages = [
   //   Discover(),
   //   Oodcast(),
@@ -42,7 +42,7 @@ class IndexPage extends StatelessWidget {
           )
         ),
       body: const Center(
-        child: Text('我的网疑云'),
+        child: Text('麦林墨儿'),
       ),
     );
   }
