@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class IndexPage extends StatelessWidget {
-  const IndexPage({Key? key}) : super(key: key);
+  IndexPage({Key? key}) : super(key: key);
 
   final List tabs = [
     {'icon': Icon(Icons.access_alarm), 'text': '发现'},
@@ -12,13 +12,13 @@ class IndexPage extends StatelessWidget {
     {'icon': Icon(Icons.access_alarm), 'text': '云村'},
     {'icon': Icon(Icons.access_alarm), 'text': '我的'},
   ];
-  // final List<Widget> pages = [
-  //   Discover(),
-  //   Oodcast(),
-  //   Focuson(),
-  //   Yuncun(),
-  //   Mine()
-  // ];
+  final List<Widget> pages = [
+    // Discover(),
+    // Oodcast(),
+    // Focuson(),
+    // Yuncun(),
+    // Mine()
+  ];
   
   @override
   Widget build(BuildContext context) {
@@ -37,12 +37,12 @@ class IndexPage extends StatelessWidget {
             ),
             elevation: 0.5,
             systemOverlayStyle: SystemUiOverlayStyle.light,
-            backgroundColor: const Color.fromARGB(220, 226, 36, 0),
+            backgroundColor: Color.fromARGB(220, 0, 47, 255),
             bottom: null,
           )
         ),
       body: const Center(
-        child: Text('麦林墨儿'),
+        child: Text('我的app'),
       ),
     );
   }

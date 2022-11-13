@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
+mixin Home on StatelessWidget {
   final List _tabs = [
-    // {'icon': CustomIcon.access_alarm}
+    {'icon': Icons.access_alarm}
   ];
 }
