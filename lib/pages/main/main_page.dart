@@ -6,7 +6,7 @@ class IndexPage extends StatelessWidget {
   IndexPage({Key? key}) : super(key: key);
 
   final List tabs = [
-    {'icon': Icon(Icons.access_alarm), 'text': '发现'},
+    {'icon': Icon(Icons.art_track_outlined), 'text': '发现'},
     {'icon': Icon(Icons.access_alarm), 'text': '播客'},
     {'icon': Icon(Icons.access_alarm), 'text': '关注'},
     {'icon': Icon(Icons.access_alarm), 'text': '云村'},
