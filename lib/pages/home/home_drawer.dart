@@ -17,6 +17,13 @@ class _userPageContent extends State<StarkDrawer> {
           child: Stack(
             children: <Widget>[
               UserAccountsDrawerHeader(
+                decoration: BoxDecoration(color: Color.fromARGB(65, 1, 1, 1)),
+                // image: DecorationImage(
+                //     image: NetworkImage(""),
+                //     fit: BoxFit.cover)),
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor: Color.fromARGB(106, 255, 255, 255),
+                ),
                 accountName: Text('name:xxxx'),
                 accountEmail: Text('email:22222@163.com'),
               ),
