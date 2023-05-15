@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application/pages/home/home_drawer.dart';
 
 class IndexPage extends StatelessWidget {
   IndexPage({Key? key}) : super(key: key);
@@ -19,31 +20,33 @@ class IndexPage extends StatelessWidget {
     // Yuncun(),
     // Mine()
   ];
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
           preferredSize: const Size.fromHeight(50),
-          child: AppBar(
-            leading: IconButton(
-                icon: const Icon(Icons.home),
-                onPressed: () {
-                  Navigator.pop(context);
-                }),
-            title: const Text(
-              '首页',
-              style: TextStyle(color: Colors.white, fontSize: 18),
-            ),
-            elevation: 0.5,
-            systemOverlayStyle: SystemUiOverlayStyle.light,
-            backgroundColor: Color.fromARGB(220, 0, 47, 255),
-            bottom: null,
-          )
-        ),
-      body: const Center(
-        child: Text('我的app'),
+          child: Builder(
+              builder: (context) => AppBar(
+                    leading: IconButton(
+                        icon: const Icon(Icons.cruelty_free),
+                        onPressed: () => Scaffold.of(context).openDrawer()),
+                    title: const Text(
+                      '首页',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                    elevation: 0.5,
+                    systemOverlayStyle: SystemUiOverlayStyle.light,
+                    backgroundColor: Color.fromARGB(15, 0, 47, 255),
+                    bottom: null,
+                  ))),
+      body: SizedBox.expand(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[]),
       ),
+      drawer: StarkDrawer(),
     );
   }
 }
