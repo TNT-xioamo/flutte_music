@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application/pages/home/home_drawer.dart';
+import 'package:flutter_application/common-widget/app-widget/app_search_bar.dart';
 
 class IndexPage extends StatelessWidget {
   IndexPage({Key? key}) : super(key: key);
@@ -31,10 +32,7 @@ class IndexPage extends StatelessWidget {
                     leading: IconButton(
                         icon: const Icon(Icons.cruelty_free),
                         onPressed: () => Scaffold.of(context).openDrawer()),
-                    title: const Text(
-                      '首页',
-                      style: TextStyle(color: Colors.white, fontSize: 18),
-                    ),
+                    title: StarkSearchBar(hintLabel: '查询相关方案'),
                     elevation: 0.5,
                     systemOverlayStyle: SystemUiOverlayStyle.light,
                     backgroundColor: Color.fromARGB(15, 0, 47, 255),
