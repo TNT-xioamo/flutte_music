@@ -67,7 +67,7 @@ class _userPageContent extends State<StarkSearchBar> {
                               hintText: widget.hintLabel,
                               hintStyle: TextStyle(
                                   color: Color.fromARGB(
-                                      255, 121, 121, 121)), // 修改颜色
+                                      255, 121, 121, 121)),
                               border: InputBorder.none,
                               contentPadding:
                                   EdgeInsets.only(bottom: 13, left: 10),
