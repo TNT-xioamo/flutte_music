@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/pages/home/home_banner.dart';
+import 'package:flutter_application/pages/home/home_content.dart';
 
 class StarkhomePage extends StatefulWidget {
   StarkhomePage({Key? key}) : super(key: key);
@@ -14,7 +15,14 @@ class _userPageContent extends State<StarkhomePage> {
         decoration: BoxDecoration(
           color: Color.fromRGBO(34, 40, 74, 1.000),
         ),
-        child: StarkhHomeBanner(),
+        child: Column(
+          children: <Widget>[
+            StarkhHomeBanner(),
+            StarkhHomeContent(
+              key: ValueKey(010),
+            )
+          ],
+        ),
       ),
     );
   }
