@@ -33,6 +33,10 @@ class _userPageContent extends State<StarkSearchBar> {
     });
   }
 
+  void handleOnSubmitted(value) {
+    print(value);
+  }
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -66,8 +70,7 @@ class _userPageContent extends State<StarkSearchBar> {
                           decoration: InputDecoration(
                               hintText: widget.hintLabel,
                               hintStyle: TextStyle(
-                                  color: Color.fromARGB(
-                                      255, 121, 121, 121)),
+                                  color: Color.fromARGB(255, 121, 121, 121)),
                               border: InputBorder.none,
                               contentPadding:
                                   EdgeInsets.only(bottom: 13, left: 10),
@@ -76,6 +79,7 @@ class _userPageContent extends State<StarkSearchBar> {
                           maxLines: 1,
                           cursorColor: Color.fromARGB(255, 255, 255, 255),
                           cursorRadius: Radius.circular(5),
+                          onSubmitted: (value) => handleOnSubmitted(value),
                         )),
                     Offstage(
                       offstage: _offstage,

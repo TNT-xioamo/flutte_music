@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application/pages/home/home_drawer.dart';
 import 'package:flutter_application/common-widget/app-widget/app_search_bar.dart';
+import 'package:flutter_application/pages/home/home_page.dart';
 
 class IndexPage extends StatelessWidget {
   IndexPage({Key? key}) : super(key: key);
@@ -40,9 +41,10 @@ class IndexPage extends StatelessWidget {
                   ))),
       body: SizedBox.expand(
         child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[]),
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[StarkhomePage()]),
       ),
       drawer: StarkDrawer(),
     );
