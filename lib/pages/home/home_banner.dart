@@ -161,6 +161,7 @@ class _userPageContent extends State<StarkhHomeBanner> {
                   children: <Widget>[
                     Container(
                         margin: EdgeInsets.only(left: 10, top: 10),
+                        padding: EdgeInsets.only(bottom: 8),
                         constraints: BoxConstraints(
                           minHeight: 100,
                           minWidth: 110,
@@ -186,6 +187,7 @@ class _userPageContent extends State<StarkhHomeBanner> {
                   children: <Widget>[
                     Container(
                       margin: EdgeInsets.only(left: 10),
+                      padding: EdgeInsets.only(bottom: 8),
                       constraints: BoxConstraints(
                         minHeight: 100,
                         minWidth: 110,
@@ -205,6 +207,7 @@ class _userPageContent extends State<StarkhHomeBanner> {
                   children: <Widget>[
                     Container(
                       margin: EdgeInsets.only(left: 10, top: 10),
+                      padding: EdgeInsets.only(bottom: 8),
                       constraints: BoxConstraints(
                         minHeight: 100,
                         minWidth: 110,

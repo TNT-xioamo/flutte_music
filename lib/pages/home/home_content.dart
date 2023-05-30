@@ -11,11 +11,15 @@ class _userPageContent extends State<StarkhHomeContent> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
+      height: 300,
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 145, 144, 144),
-        borderRadius: BorderRadius.circular(8),
+        color: Color.fromRGBO(246, 246, 246, 1),
+        borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(10), topRight: Radius.circular(10)),
       ),
+      child: Column(children: <Widget> [
+        
+      ]),
     );
   }
 }
