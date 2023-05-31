@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class StarkhHomeContent extends StatefulWidget {
   StarkhHomeContent({Key? key}) : super(key: key);
@@ -32,22 +33,20 @@ class _userPageContent extends State<StarkhHomeContent> {
           width: MediaQuery.of(context).size.width,
           height: 100,
           decoration: BoxDecoration(
-            color: Color.fromRGBO(246, 246, 246, 1),
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+            color: Color.fromRGBO(254, 254, 254, 1),
+            borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
         )
       ],
     );
-
     return Container(
       width: MediaQuery.of(context).size.width,
       height: 300,
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: Color.fromRGBO(246, 246, 246, 1),
         borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+            topLeft: Radius.circular(30), topRight: Radius.circular(30)),
       ),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -96,9 +95,32 @@ class _userPageContent extends State<StarkhHomeContent> {
                       ],
                     )
                   ],
-                )
+                ),
               ],
-            )
+            ),
+            SingleChildScrollView(
+                child: IntrinsicHeight(
+                    child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(height: 10),
+                ClockItem,
+                SizedBox(height: 10),
+                ClockItem,
+                SizedBox(height: 10),
+                ClockItem,
+                SizedBox(height: 10),
+                ClockItem,
+                SizedBox(height: 10),
+                ClockItem,
+                SizedBox(height: 10),
+                ClockItem,
+                SizedBox(height: 10),
+                ClockItem
+              ],
+            )))
           ]),
     );
   }
