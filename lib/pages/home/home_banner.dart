@@ -78,152 +78,163 @@ class _userPageContent extends State<StarkhHomeBanner> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Column(
-              children: [
-                Container(
-                  padding: EdgeInsets.all(12),
-                  constraints: BoxConstraints(
-                    maxHeight: 300,
-                    maxWidth: 160,
-                    minHeight: 210,
-                    minWidth: 110,
-                  ),
-                  decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 145, 144, 144),
-                      borderRadius: BorderRadius.circular(8),
-                      image: DecorationImage(
-                          image: AssetImage('assets/image/clock.webp'),
-                          fit: BoxFit.cover)),
-                  child: IntrinsicHeight(
-                      child: InkWell(
-                    onTap: () => handleClock(),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Row(children: [
-                          Text(
-                            moment,
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(8, 37, 49, 1.000)),
-                          )
-                        ]),
-                        Row(
+            Expanded(
+                flex: 2,
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(12),
+                      constraints: BoxConstraints(
+                        // maxHeight: 300,
+                        // maxWidth: 160,
+                        minHeight: 210,
+                        // minWidth: 90,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 145, 144, 144),
+                          borderRadius: BorderRadius.circular(8),
+                          image: DecorationImage(
+                              image: AssetImage('assets/image/clock.webp'),
+                              fit: BoxFit.cover)),
+                      child: IntrinsicHeight(
+                          child: InkWell(
+                        onTap: () => handleClock(),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text(
-                              '不要忘记',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: Color.fromRGBO(8, 37, 49, 1.000)),
-                            ),
-                            Text(
-                              '打卡哟',
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Color.fromRGBO(22, 120, 161, 1)),
-                            ),
+                            Row(children: [
+                              Text(
+                                moment,
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromRGBO(8, 37, 49, 1.000)),
+                              )
+                            ]),
+                            Row(
+                              children: <Widget>[
+                                Text(
+                                  '不要忘记',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Color.fromRGBO(8, 37, 49, 1.000)),
+                                ),
+                                Text(
+                                  '打卡哟',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color.fromRGBO(22, 120, 161, 1)),
+                                ),
+                              ],
+                            )
                           ],
-                        )
+                        ),
+                      )),
+                    )
+                  ],
+                )),
+            Expanded(
+                flex: 1,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Expanded(
+                            child: Container(
+                          margin: EdgeInsets.only(left: 10),
+                          padding: EdgeInsets.only(bottom: 8),
+                          constraints: BoxConstraints(minHeight: 100),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 145, 144, 144),
+                              borderRadius: BorderRadius.circular(8),
+                              image: DecorationImage(
+                                  image: AssetImage('assets/image/card.webp'),
+                                  fit: BoxFit.cover)),
+                          child: userModule('打卡频道'),
+                        ))
                       ],
                     ),
-                  )),
-                )
-              ],
-            ),
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Row(
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                            child: Container(
+                                margin: EdgeInsets.only(left: 10, top: 10),
+                                padding: EdgeInsets.only(bottom: 8),
+                                constraints: BoxConstraints(
+                                  minHeight: 100,
+                                ),
+                                decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 145, 144, 144),
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/image/game.webp'),
+                                        fit: BoxFit.cover)),
+                                child: userModule('关注动态')))
+                      ],
+                    ),
+                  ],
+                )),
+            Expanded(
+                flex: 1,
+                child: Column(
                   mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(left: 10),
-                      padding: EdgeInsets.only(bottom: 8),
-                      constraints:
-                          BoxConstraints(minHeight: 100, minWidth: 110),
-                      decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 145, 144, 144),
-                          borderRadius: BorderRadius.circular(8),
-                          image: DecorationImage(
-                              image: AssetImage('assets/image/card.webp'),
-                              fit: BoxFit.cover)),
-                      child: userModule('打卡频道'),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Expanded(
+                            flex: 1,
+                            child: Container(
+                              margin: EdgeInsets.only(left: 10),
+                              padding: EdgeInsets.only(bottom: 8),
+                              constraints: BoxConstraints(
+                                minHeight: 100,
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 145, 144, 144),
+                                  borderRadius: BorderRadius.circular(8),
+                                  image: DecorationImage(
+                                      image:
+                                          AssetImage('assets/image/gift.webp'),
+                                      fit: BoxFit.cover)),
+                              child: userModule('游玩广场'),
+                            ))
+                      ],
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Expanded(
+                            flex: 1,
+                            child: Container(
+                              margin: EdgeInsets.only(left: 10, top: 10),
+                              padding: EdgeInsets.only(bottom: 8),
+                              constraints: BoxConstraints(
+                                minHeight: 100,
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 145, 144, 144),
+                                  borderRadius: BorderRadius.circular(8),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/image/village.webp'),
+                                      fit: BoxFit.cover)),
+                              child: userModule('学习村落'),
+                            )),
+                      ],
                     )
                   ],
-                ),
-                Row(
-                  children: <Widget>[
-                    Container(
-                        margin: EdgeInsets.only(left: 10, top: 10),
-                        padding: EdgeInsets.only(bottom: 8),
-                        constraints: BoxConstraints(
-                          minHeight: 100,
-                          minWidth: 110,
-                        ),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 145, 144, 144),
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('assets/image/game.webp'),
-                                fit: BoxFit.cover)),
-                        child: userModule('关注动态'))
-                  ],
-                ),
-              ],
-            ),
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(left: 10),
-                      padding: EdgeInsets.only(bottom: 8),
-                      constraints: BoxConstraints(
-                        minHeight: 100,
-                        minWidth: 110,
-                      ),
-                      decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 145, 144, 144),
-                          borderRadius: BorderRadius.circular(8),
-                          image: DecorationImage(
-                              image: AssetImage('assets/image/gift.webp'),
-                              fit: BoxFit.cover)),
-                      child: userModule('游玩广场'),
-                    )
-                  ],
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(left: 10, top: 10),
-                      padding: EdgeInsets.only(bottom: 8),
-                      constraints: BoxConstraints(
-                        minHeight: 100,
-                        minWidth: 110,
-                      ),
-                      decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 145, 144, 144),
-                          borderRadius: BorderRadius.circular(8),
-                          image: DecorationImage(
-                              image: AssetImage('assets/image/village.webp'),
-                              fit: BoxFit.cover)),
-                      child: userModule('学习村落'),
-                    )
-                  ],
-                )
-              ],
-            ),
+                )),
           ],
         ));
   }

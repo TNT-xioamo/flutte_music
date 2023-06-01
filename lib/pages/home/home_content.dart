@@ -29,19 +29,21 @@ class _userPageContent extends State<StarkhHomeContent> {
     Widget ClockItem = Row(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        Container(
+        Expanded(
+            child: Container(
           width: MediaQuery.of(context).size.width,
+          margin: EdgeInsets.only(top: 20),
           height: 100,
           decoration: BoxDecoration(
             color: Color.fromRGBO(254, 254, 254, 1),
             borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
-        )
+        ))
       ],
     );
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 300,
+      height: 700,
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: Color.fromRGBO(246, 246, 246, 1),
@@ -105,19 +107,12 @@ class _userPageContent extends State<StarkhHomeContent> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                SizedBox(height: 10),
                 ClockItem,
-                SizedBox(height: 10),
                 ClockItem,
-                SizedBox(height: 10),
                 ClockItem,
-                SizedBox(height: 10),
                 ClockItem,
-                SizedBox(height: 10),
                 ClockItem,
-                SizedBox(height: 10),
                 ClockItem,
-                SizedBox(height: 10),
                 ClockItem
               ],
             )))
