@@ -64,6 +64,8 @@ class _userPageContent extends State<StarkSearchBar> {
                           textInputAction: TextInputAction.search,
                           autofocus: false,
                           focusNode: _focusNode,
+                          onTapOutside: (event) => _focusNode.unfocus(),
+                          onEditingComplete:() => {},
                           style: TextStyle(
                               fontSize: 14,
                               color: Color.fromARGB(255, 255, 255, 255)),

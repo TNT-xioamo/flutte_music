@@ -18,9 +18,7 @@ class _userPageContent extends State<StarkhomePage> {
         child: Column(
           children: <Widget>[
             StarkhHomeBanner(),
-            StarkhHomeContent(
-              key: ValueKey(010),
-            )
+            Expanded(child: StarkhHomeContent(key: ValueKey(010)))
           ],
         ),
       ),

@@ -44,7 +44,9 @@ class IndexPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
-            children: <Widget>[StarkhomePage()]),
+            children: <Widget>[
+              Expanded(child: StarkhomePage(),)
+            ]),
       ),
       drawer: StarkDrawer(),
     );

@@ -30,20 +30,20 @@ class _userPageContent extends State<StarkhHomeContent> {
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         Expanded(
+            flex: 1,
             child: Container(
-          width: MediaQuery.of(context).size.width,
-          margin: EdgeInsets.only(top: 20),
-          height: 100,
-          decoration: BoxDecoration(
-            color: Color.fromRGBO(254, 254, 254, 1),
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-          ),
-        ))
+              width: MediaQuery.of(context).size.width,
+              margin: EdgeInsets.only(top: 20),
+              height: 120,
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(159, 24, 24, 1),
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+              ),
+            ))
       ],
     );
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 700,
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: Color.fromRGBO(246, 246, 246, 1),
@@ -79,7 +79,7 @@ class _userPageContent extends State<StarkhHomeContent> {
                                   color: activated == 'clock'
                                       ? tabColor
                                       : Color.fromRGBO(192, 192, 192, 1),
-                                  fontSize: 26,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.bold)),
                         ),
                         SizedBox(width: 15),
@@ -91,7 +91,7 @@ class _userPageContent extends State<StarkhHomeContent> {
                                   color: activated == 'broad'
                                       ? tabColor
                                       : Color.fromRGBO(192, 192, 192, 1),
-                                  fontSize: 26,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.bold),
                             ))
                       ],
@@ -100,22 +100,22 @@ class _userPageContent extends State<StarkhHomeContent> {
                 ),
               ],
             ),
-            SingleChildScrollView(
-                child: IntrinsicHeight(
-                    child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                ClockItem,
-                ClockItem,
-                ClockItem,
-                ClockItem,
-                ClockItem,
-                ClockItem,
-                ClockItem
-              ],
-            )))
+            SizedBox(height: 10),
+            Expanded(child: Scrollbar(child:
+              SingleChildScrollView(
+              child: IntrinsicHeight( child: Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  ClockItem,
+                  ClockItem,
+                  ClockItem,
+                  ClockItem,
+                  ClockItem,
+                  ClockItem,
+                  ClockItem
+                ])))))
           ]),
     );
   }
