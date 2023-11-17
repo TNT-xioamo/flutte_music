@@ -33,10 +33,10 @@ class IndexPage extends StatelessWidget {
                     leading: IconButton(
                         icon: const Icon(Icons.cruelty_free),
                         onPressed: () => Scaffold.of(context).openDrawer()),
-                    title: StarkSearchBar(hintLabel: '查询相关方案'),
+                    title: const StarkSearchBar(hintLabel: '查询相关方案'),
                     elevation: 0.5,
                     systemOverlayStyle: SystemUiOverlayStyle.light,
-                    backgroundColor: Color.fromARGB(15, 0, 47, 255),
+                    backgroundColor: const Color.fromARGB(15, 0, 47, 255),
                     bottom: null,
                   ))),
       body: SizedBox.expand(
@@ -48,7 +48,7 @@ class IndexPage extends StatelessWidget {
               Expanded(child: StarkhomePage(),)
             ]),
       ),
-      drawer: StarkDrawer(),
+      drawer: const StarkDrawer(),
     );
   }
 }

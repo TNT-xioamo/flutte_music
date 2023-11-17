@@ -103,7 +103,7 @@ class _userPageContent extends State<StarkhHomeContent> {
             SizedBox(height: 10),
             Expanded(child: Scrollbar(child:
               SingleChildScrollView(
-              child: IntrinsicHeight( child: Column(
+              child: IntrinsicHeight(child: Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,

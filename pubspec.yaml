@@ -42,6 +42,7 @@ dependencies:
   flutter_sticky_header: ^0.3.4 # 滑动吸顶
   flutter_redux: ^0.5.3
   redux: ^3.0.0 # 状态管理
+  flutter_easyloading: ^3.0.5
   # fluttertoast: ^8.0.9 # 全局通知插件
 
 dev_dependencies:
