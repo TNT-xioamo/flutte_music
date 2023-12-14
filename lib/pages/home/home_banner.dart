@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class StarkhHomeBanner extends StatefulWidget {
@@ -7,17 +9,19 @@ class StarkhHomeBanner extends StatefulWidget {
 }
 
 class _userPageContent extends State<StarkhHomeBanner> {
-  DateTime dateTime = DateTime.now();
+  late DateTime dateTime;
+  late Timer _timer;
   String moment = '';
+
   @override
   void initState() {
     super.initState();
-    handleTime();
+    this._timer = new Timer.periodic(Duration (seconds: 1), handleTime);
   }
 
-  void handleTime() {
+  void handleTime(timer) {
     var i = '';
-    var hour = dateTime.hour;
+    var hour = new DateTime.now().hour;
     if (hour < 10) {
       i = '早上好';
     } else if (hour < 12) {
@@ -27,13 +31,14 @@ class _userPageContent extends State<StarkhHomeBanner> {
     } else {
       i = '晚上好';
     }
+    if (moment == i) return;
     setState(() {
       moment = i;
     });
   }
 
   void handleClock() {
-    print(dateTime);
+    print(moment);
   }
 
   void handleCard() {
@@ -43,7 +48,11 @@ class _userPageContent extends State<StarkhHomeBanner> {
   void _handleDynamic(String type) {
     print(type);
   }
-
+@override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     @override
@@ -157,7 +166,7 @@ class _userPageContent extends State<StarkhHomeBanner> {
                               image: DecorationImage(
                                   image: AssetImage('assets/image/card.webp'),
                                   fit: BoxFit.cover)),
-                          child: userModule('打卡频道'),
+                          child: userModule('同城频道'),
                         ))
                       ],
                     ),
@@ -229,7 +238,7 @@ class _userPageContent extends State<StarkhHomeBanner> {
                                       image: AssetImage(
                                           'assets/image/village.webp'),
                                       fit: BoxFit.cover)),
-                              child: userModule('学习村落'),
+                              child: userModule('灵魂村落'),
                             )),
                       ],
                     )

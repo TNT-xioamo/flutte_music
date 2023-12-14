@@ -62,7 +62,7 @@ class _userPageContent extends State<StarkhHomeContent> {
                   children: <Widget>[
                     Container(
                       width: 6,
-                      height: 32,
+                      height: 20,
                       decoration: BoxDecoration(
                         color: Color.fromRGBO(97, 176, 165, 1),
                         borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -74,7 +74,7 @@ class _userPageContent extends State<StarkhHomeContent> {
                       children: <Widget>[
                         InkWell(
                           onTap: () => handleToggleTab('clock'),
-                          child: Text('打卡',
+                          child: Text('派对',
                               style: TextStyle(
                                   color: activated == 'clock'
                                       ? tabColor
@@ -86,7 +86,7 @@ class _userPageContent extends State<StarkhHomeContent> {
                         InkWell(
                             onTap: () => handleToggleTab('broad'),
                             child: Text(
-                              '广播',
+                              '广场',
                               style: TextStyle(
                                   color: activated == 'broad'
                                       ? tabColor

@@ -9,6 +9,22 @@ class StarkhomePage extends StatefulWidget {
 }
 
 class _userPageContent extends State<StarkhomePage> {
+  late ScrollController _scrollController;
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(() {
+      // 处理滚动事件的逻辑
+    });
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
   Widget build(BuildContext context) {
     return SizedBox(
       child: DecoratedBox(
