@@ -14,10 +14,10 @@ class _userPageContent extends State<StarkhomePage> {
   void initState() {
     super.initState();
     _scrollController = ScrollController();
-    _scrollController.addListener(() {
-      // 处理滚动事件的逻辑
-    });
+    _scrollController.addListener(_handle_scroll);
   }
+
+  void _handle_scroll() {}
 
   @override
   void dispose() {
@@ -31,7 +31,8 @@ class _userPageContent extends State<StarkhomePage> {
         decoration: BoxDecoration(
           color: Color.fromRGBO(34, 40, 74, 1.000),
         ),
-        child: Column(
+        child: ListView(
+          controller: _scrollController,
           children: <Widget>[
             StarkhHomeBanner(),
             Expanded(child: StarkhHomeContent(key: ValueKey(010)))
